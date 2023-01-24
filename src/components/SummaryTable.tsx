@@ -24,6 +24,7 @@ export function SummaryTable(){
 
     useEffect(() => {
         api.get('summary').then(res => {
+            
             setSummary(res.data)
             
         })
@@ -44,13 +45,13 @@ export function SummaryTable(){
                 
             </div>
             <div className="grid grid-rows-7 grid-flow-col gap-3">
-                {summary.length > 0 && sumaryDate.map( date => {
+                {summary.length > 0 && sumaryDate.map( (date, i) => {
 
                     const dayInSuymmary = summary.find(day => {
                         return dayjs(date).isSame(day.date, 'day')
                     })
 
-                    return <HabitDay date={date} amount={dayInSuymmary?.amount} defaultCompleted={dayInSuymmary?.completed}/>
+                    return <HabitDay key={i}  date={date} amount={dayInSuymmary?.amount} defaultCompleted={dayInSuymmary?.completed}/>
                 })}
 
                 {amountOfDaysToFill > 0 && Array.from({length : amountOfDaysToFill}).map( (_, i) => {

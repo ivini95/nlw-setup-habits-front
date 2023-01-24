@@ -54,7 +54,7 @@ export function NewHabitForm(){
     return(
         <form onSubmit={createNewHabit} className="w-full flex flex-col mt-6">
             <label className="font-semibold leading-tight" htmlFor="title">Qual o seu comprometimento?</label>
-            <input type='text' id="title" placeholder="ex.: Exercícios, Berber 2l de água, ..." autoFocus className="h-10 pg-4 rounded-lg mt-3 bg-zinc-800 text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-violet-800 focus:ring-offset-2 focus:ring-offset-zinc-900 " onChange={event => setTitle(event.target.value)} value={title}/>
+            <input type='text' id="title" placeholder="ex.: Exercícios, Beber 2l de água, ..." autoFocus className="h-10 pg-4 rounded-lg mt-3 bg-zinc-800 text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-violet-800 focus:ring-offset-2 focus:ring-offset-zinc-900 " onChange={event => setTitle(event.target.value)} value={title}/>
 
             <label htmlFor="" className="font-semibold leading-tight mt-4">Qual a recorrência?</label>
 
